@@ -208,18 +208,17 @@ body.darkmode--activated {
   
   .name {
 	display: inline-block;
-	width: 50%;
+	width: 80%;
 	line-height: 45px;
   }
   
   .level {
 	display: inline-block;
-	width: 15%;
+	width: 12%;
   }
 
   .score {
-	display: inline-table;
-	width: 10%;
+	display: inline-block;
   }
   #username {
 	font-size: 25px;

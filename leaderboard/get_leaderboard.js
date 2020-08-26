@@ -2,10 +2,7 @@ var request = new XMLHttpRequest()
 
 var user = name
 
-
-
-
-request.open('GET', 'http://localhost:4242/api/v1/leaderboard', true)
+request.open('GET', 'http://localhost:4242/api/leaderboard', true)
 request.onload = function () {
 // Begin accessing JSON data here
 var data = JSON.parse(this.response)
@@ -22,7 +19,8 @@ if (data) {
         remaining_xp = rankupxp - difference
              $( `#leaderboard` ).append(`
                  <div class="lb-row">
-                     <div class="level">Level ${user.level}</div><div class="name">${user.name}</div><div class="score">${user.exp} XP</div><div class="progress"><progress id="progressid" value="${difference}" max="${rankupxp}"></progress></div>
+                    <div class="level">Level ${user.level}</div><div class="name">${user.name}</div><div class="score">${user.exp} XP</div>
+                    <div class="progress"><progress id="progressid" value="${difference}" max="${rankupxp}"></progress></div>
                  </div>` 
                  );
     })
