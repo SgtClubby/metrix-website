@@ -1,0 +1,322 @@
+
+@media screen and (max-width: 850px) {
+
+
+	#leaderboard {
+		width: 400px;
+		height: auto;
+		padding-left: 2em
+		}
+	.progress{
+		display: none;
+	}
+
+
+	progress::-webkit-progress-bar {
+		display: none;
+	}
+	progress::-webkit-progress-value {
+	display: none;
+	}
+
+}
+@media screen and (max-width: 60000px) {
+	.progress progress{
+	background-color: #252525;
+	width: 100%;
+	height: 15px;
+	}
+
+	progress::-webkit-progress-bar {
+	background-color: #C0D1E1;
+	}
+	progress::-webkit-progress-value {
+	background-color: #6094C6;
+	}
+}
+@media screen and (max-width: 1501px) {
+
+	#sidebar {
+	padding-left:256px;
+	width:700px;
+	}
+
+	#leaderboard {
+		width: 1000px;
+		height: auto;
+		padding-left: 2em
+	}
+	.progress progress{
+	background-color: #252525;
+	width: 100%;
+	height: 15px;
+	}
+
+	progress::-webkit-progress-bar {
+	background-color: #C0D1E1;
+	}
+	progress::-webkit-progress-value {
+	background-color: #6094C6;
+	}
+}
+
+@media screen and (max-width: 1149px) {
+
+	#leaderboard {
+		width: 700px;
+		height: auto;
+		padding-left: 2em
+	  }
+	.progress progress{
+	background-color: #252525;
+	width: 100%;
+	height: 15px;
+
+	}
+
+	progress::-webkit-progress-bar {
+	background-color: #C0D1E1;
+	appearance: none;
+	}
+	progress::-webkit-progress-value {
+	background-color: #6094C6;
+	}
+
+}
+#darkmode-background{
+	background-color:#dadada;
+}
+::selection {
+	color: white;
+	background: #92c0eb;
+}
+
+.darkmode--activated > * {
+	color: rgb(255, 255, 255);
+}
+
+
+body.darkmode--activated {
+	color: rgb(92, 92, 92);
+}
+.darkmode-toggle {
+	z-index:10;
+	font-weight:bold;
+	font-size:0.8em;
+	color:white;
+}
+
+.article-top {
+	position:relative;
+	top:100px;
+}
+
+.buttonColorDark {
+	color:rgb(32, 32, 32)
+}
+
+.row {
+	margin-top:100px;
+	margin-right:0px;
+}
+
+.header-all {
+	top:0%;
+	right:0px;
+	width:100%;
+	margin-top:auto;
+	position:inherit;
+	z-index:5;
+	position:fixed;
+}
+#content{
+	width:80%;
+	margin-left:150px;
+	margin-right:0vw;
+	margin-top:25px;
+}
+.text-main {
+	
+	padding:10px;
+	position:relative;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+#sidebar {
+	margin-left: -80px;
+}
+
+.txtimg {
+	float:right;
+	margin-right:0.5vw;
+}
+
+.GSHeader-title {
+	margin-top:50px;
+	margin-left:160px;
+	font-size:2.5em;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	z-index:1;
+	
+}
+
+.underline {
+	left:0.25vw;
+	top:-20px;
+	position:relative;
+	width:65vw;
+	height:2px;
+	background-color:#6094C6;
+	z-index:3;
+}
+
+.GSabout {
+	text-decoration: none;
+	left:50vw;
+	top:26%;
+	float:left;
+	position:relative;
+	font-weight:bold;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color:white;
+	font-size:1.7em;	
+}
+
+.GSservice {
+	text-decoration: none;
+	left:49vw;
+	top:26%;
+	float:left;
+	position:relative;
+	font-weight:bold;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color:white;
+	font-size:1.7em;
+}
+
+.GShome {
+	text-decoration: none;
+	left:48%;
+	top:26%;
+	float:left;
+	position:relative;
+	font-weight:bold;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color:white;
+	font-size:1.7em;
+
+}
+
+.GSheader-Top {
+	background-color:#6094C6;
+	height:23px;
+	z-index:10;
+}
+
+.GSheader-Bot {
+	background-color:#537ea5;
+	height:60px;
+	z-index:11;
+}
+
+.col-sm-2{
+	right:20px;
+	max-width:250px;
+}
+
+.GSnav:hover {
+	color:white;
+}
+
+.GStitle {
+	color:white;
+	left:140px;
+	position:relative;
+	float:left;
+	font-size:3em;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	z-index:10;
+}
+
+.GSimg {
+	left:-1px;
+	position:fixed;
+	top:-4px;
+	width:145px;
+	z-index:11;
+}
+
+#gs-top-home-img{
+	width:100%;
+}
+
+#page-container {
+	position: relative;
+	min-height: 10vh;
+	background-color:#6094C6;
+  }
+  
+  #content-wrap {
+	padding-bottom: 1rem;
+  }
+  
+  #footer {
+	font-size:2.5em;
+	color:white;
+	position: sticky;
+	width: 100%;
+  }
+  #footer-txt {
+	margin-left:4em;
+	font-size:2.5em;
+	color:white;
+  }
+
+  #txtdarkmode {
+	  margin-left:160px;
+	  color:white;
+	  font-size:0.75em;
+  }
+  
+  .lb-rrr {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #AFAFAF;
+  }
+
+  .lb-row {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 65px;
+	border-bottom: 1px solid #AFAFAF;
+  }
+  
+  .name {
+	display: inline-block;
+	width: 50%;
+	line-height: 45px;
+  }
+  
+  .level {
+	display: inline-block;
+	width: 15%;
+  }
+
+  .score {
+	display: inline-table;
+	width: 10%;
+  }
+  #username {
+	font-size: 25px;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+  }
+  #level {
+	font-size: 25px;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+  }
+  #xp {
+	font-size: 25px;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+  }
