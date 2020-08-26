@@ -1,7 +1,5 @@
 
 @media screen and (max-width: 850px) {
-
-
 	#leaderboard {
 		width: 400px;
 		height: auto;
@@ -10,15 +8,12 @@
 	.progress{
 		display: none;
 	}
-
-
 	progress::-webkit-progress-bar {
 		display: none;
 	}
 	progress::-webkit-progress-value {
 	display: none;
 	}
-
 }
 @media screen and (max-width: 60000px) {
 	.progress progress{
@@ -26,7 +21,6 @@
 	width: 100%;
 	height: 15px;
 	}
-
 	progress::-webkit-progress-bar {
 	background-color: #C0D1E1;
 	}
@@ -35,12 +29,10 @@
 	}
 }
 @media screen and (max-width: 1501px) {
-
 	#sidebar {
 	padding-left:256px;
 	width:700px;
 	}
-
 	#leaderboard {
 		width: 1000px;
 		height: auto;
@@ -51,7 +43,6 @@
 	width: 100%;
 	height: 15px;
 	}
-
 	progress::-webkit-progress-bar {
 	background-color: #C0D1E1;
 	}
@@ -61,19 +52,16 @@
 }
 
 @media screen and (max-width: 1149px) {
-
 	#leaderboard {
 		width: 700px;
 		height: auto;
 		padding-left: 2em
-	  }
+	}
 	.progress progress{
 	background-color: #252525;
 	width: 100%;
 	height: 15px;
-
 	}
-
 	progress::-webkit-progress-bar {
 	background-color: #C0D1E1;
 	appearance: none;
@@ -81,7 +69,6 @@
 	progress::-webkit-progress-value {
 	background-color: #6094C6;
 	}
-
 }
 #darkmode-background{
 	background-color:#dadada;
@@ -95,7 +82,6 @@
 	color: rgb(255, 255, 255);
 }
 
-
 body.darkmode--activated {
 	color: rgb(92, 92, 92);
 }
@@ -104,11 +90,6 @@ body.darkmode--activated {
 	font-weight:bold;
 	font-size:0.8em;
 	color:white;
-}
-
-.article-top {
-	position:relative;
-	top:100px;
 }
 
 .buttonColorDark {
@@ -129,25 +110,19 @@ body.darkmode--activated {
 	z-index:5;
 	position:fixed;
 }
+
 #content{
 	width:80%;
 	margin-left:150px;
 	margin-right:0vw;
 	margin-top:25px;
 }
+
 .text-main {
 	
 	padding:10px;
 	position:relative;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-}
-#sidebar {
-	margin-left: -80px;
-}
-
-.txtimg {
-	float:right;
-	margin-right:0.5vw;
 }
 
 .GSHeader-title {
@@ -157,53 +132,6 @@ body.darkmode--activated {
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	z-index:1;
 	
-}
-
-.underline {
-	left:0.25vw;
-	top:-20px;
-	position:relative;
-	width:65vw;
-	height:2px;
-	background-color:#6094C6;
-	z-index:3;
-}
-
-.GSabout {
-	text-decoration: none;
-	left:50vw;
-	top:26%;
-	float:left;
-	position:relative;
-	font-weight:bold;
-	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	color:white;
-	font-size:1.7em;	
-}
-
-.GSservice {
-	text-decoration: none;
-	left:49vw;
-	top:26%;
-	float:left;
-	position:relative;
-	font-weight:bold;
-	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	color:white;
-	font-size:1.7em;
-}
-
-.GShome {
-	text-decoration: none;
-	left:48%;
-	top:26%;
-	float:left;
-	position:relative;
-	font-weight:bold;
-	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	color:white;
-	font-size:1.7em;
-
 }
 
 .GSheader-Top {
@@ -259,12 +187,6 @@ body.darkmode--activated {
 	padding-bottom: 1rem;
   }
   
-  #footer {
-	font-size:2.5em;
-	color:white;
-	position: sticky;
-	width: 100%;
-  }
   #footer-txt {
 	margin-left:4em;
 	font-size:2.5em;
@@ -276,21 +198,12 @@ body.darkmode--activated {
 	  color:white;
 	  font-size:0.75em;
   }
-  
-  .lb-rrr {
-	position: relative;
-	display: block;
-	width: 100%;
-	height: 40px;
-	border-bottom: 1px solid #AFAFAF;
-  }
 
   .lb-row {
 	position: relative;
 	display: block;
 	width: 100%;
 	height: 65px;
-	border-bottom: 1px solid #AFAFAF;
   }
   
   .name {
@@ -319,4 +232,7 @@ body.darkmode--activated {
   #xp {
 	font-size: 25px;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+  }
+  #top-of-lb {
+	border-bottom: 2px solid #6094C6;
   }
