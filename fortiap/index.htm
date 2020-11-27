@@ -6,14 +6,17 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="main.css">
 <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
-<script src="../scripts/darkmode.js"></script>
+<script src="/scripts/darkmode.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="./get_aps.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="icon" type="image/png" href="../img/metrix1x.png">
 </head>
 <body>
 	<div class="GSimage">
-		<img id="idGSimg" class="GSimg" src="../img/metrixrounded.png" alt="metrixrounded"/>
+		<a href="/home/">
+			<img id="idGSimg" class="GSimg" src="../img/metrixrounded.png" alt="metrixrounded"/>
+		</a>
 	</div>
 <nav class="header-all">
 	<div class="GSheader-Top"> </div>
@@ -23,18 +26,19 @@
 		<a id="idGShome" class="GShome GSnav" href="../home" >Back</a>
 		<script>
 			let options = {
-  				bottom: 'unset',
- 				right: 'unset', 
- 				left: 'unset', 
- 				time: '0.5s', 
-				mixColor: '#fff', 
-				buttonColorDark: '#100f2c',  
-				buttonColorLight: '#fff', 
+  			bottom: '32px',
+ 				right: '32px',
+ 				left: 'unset',
+ 				time: '0.5s',
+				mixColor: '#fff',
+				buttonColorDark: '#252525',
+				buttonColorLight: '#fff',
 				saveInCookies: true,
-				label: '',
+				off: 'wb_sunny',
+				on: 'bedtime',
 				autoMatchOsTheme: true,
-			}
-  			new Darkmode().showWidget(options);
+				}
+  			new Darkmode(options).showWidget();
 		</script>
 			
 	</div>

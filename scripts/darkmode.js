@@ -3,7 +3,7 @@
 }("undefined" != typeof self ? self : this, (function() {
     return function(e) {
         var t = {};
-
+        var config;
         function n(o) {
             if (t[o]) return t[o].exports;
             var r = t[o] = {
@@ -94,20 +94,23 @@
                         backgroundColor: "#fff",
                         buttonColorDark: "#333",
                         buttonColorLight: "#fff",
-                        label: "Theme",
+                        off: "",
+                        on: "",
                         saveInCookies: !0,
                         autoMatchOsTheme: !0
                     }, t);
-                    var n = "\n      .darkmode-layer {\n        position: fixed;\n        pointer-events: none;\n        background: ".concat(t.mixColor, ";\n        transition: all ").concat(t.time, " ease;\n        mix-blend-mode: difference;\n      }\n\n      .darkmode-layer--button {\n        width: 2.9rem;\n        height: 2.9rem;\n        border-radius: 50%;\n        right: ").concat(t.right, ";\n        bottom: ").concat(t.bottom, ";\n        left: ").concat(t.left, ";\n      }\n\n      .darkmode-layer--simple {\n        width: 100%;\n        height: 100%;\n        top: 0;\n        left: 0;\n        transform: scale(1) !important;\n      }\n\n      .darkmode-layer--expanded {\n        transform: scale(100);\n        border-radius: 0;\n      }\n\n      .darkmode-layer--no-transition {\n        transition: none;\n      }\n\n      .darkmode-toggle {\n        background: ").concat(t.buttonColorDark, ";\n        width: 3rem;\n        height: 3rem;\n        position: fixed;\n        border-radius: 50%;\n        border:none;\n        right: ").concat(t.right, ";\n        bottom: ").concat(t.bottom, ";\n        left: ").concat(t.left, ";\n        cursor: pointer;\n        transition: all 0.5s ease;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n      }\n\n      .darkmode-toggle--white {\n        background: ").concat(t.buttonColorLight, ";\n      }\n\n      .darkmode-toggle--inactive {\n        display: none;\n      }\n\n      .darkmode-background {\n        background: ").concat(t.backgroundColor, ";\n        position: fixed;\n        pointer-events: none;\n        z-index: -10;\n        width: 100%;\n        height: 100%;\n        top: 0;\n        left: 0;\n      }\n\n      img, .darkmode-ignore {\n        isolation: isolate;\n        display: inline-block;\n      }\n\n      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {\n        .darkmode-toggle {display: none !important}\n      }\n\n      @supports (-ms-ime-align:auto), (-ms-accelerator:true) {\n        .darkmode-toggle {display: none !important}\n      }\n    "),
+                    var n = "\n      .darkmode-layer {\n        position: fixed;\n        pointer-events: none;\n        background: ".concat(t.mixColor, ";\n        transition: all ").concat(t.time, " ease;\n        mix-blend-mode: difference;\n      }\n\n      .darkmode-layer--button {\n        width: 2.9rem;\n        height: 2.9rem;\n        border-radius: 50%;\n        right: ").concat(t.right, ";\n        bottom: ").concat(t.bottom, ";\n        left: ").concat(t.left, ";\n      }\n\n      .darkmode-layer--simple {\n        width: 100%;\n        height: 100%;\n        top: 0;\n        left: 0;\n        transform: scale(1) !important;\n      }\n\n      .darkmode-layer--expanded {\n        transform: scale(100);\n        border-radius: 0;\n      }\n\n      .darkmode-layer--no-transition {\n        transition: none;\n      }\n\n      .darkmode-toggle {\n        background: ").concat(t.buttonColorDark, ";\n        width: 3rem;\n        height: 3rem;\n        position: fixed;\n        border-radius: 50%;\n        border:none;\n        right: ").concat(t.right, ";\n        bottom: ").concat(t.bottom, ";\n        left: ").concat(t.left, ";\n        cursor: pointer;\n        transition: all 0.5s ease;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n      }\n\n      .darkmode-toggle--white {\n  color: #000;\n      background: ").concat(t.buttonColorLight, ";\n      }\n\n      .darkmode-toggle--inactive {\n        display: none;\n      }\n\n      .darkmode-background {\n        background: ").concat(t.backgroundColor, ";\n        position: fixed;\n        pointer-events: none;\n        z-index: -10;\n        width: 100%;\n        height: 100%;\n        top: 0;\n        left: 0;\n      }\n\n      img, .darkmode-ignore {\n        isolation: isolate;\n        display: inline-block;\n      }\n\n      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {\n        .darkmode-toggle {display: none !important}\n      }\n\n      @supports (-ms-ime-align:auto), (-ms-accelerator:true) {\n        .darkmode-toggle {display: none !important}\n      }\n    "),
                         o = document.createElement("div"),
                         a = document.createElement("button"),
                         d = document.createElement("div");
+                        console.log(t);
+                        this.config = t
                     o.id="darkmode-background"
-                    a.innerHTML = t.label, a.classList.add("darkmode-toggle--inactive"), o.classList.add("darkmode-layer"), d.classList.add("darkmode-background");
+                        a.innerHTML = `<i class="material-icons md-18">${t.on}</i>`, a.classList.add("darkmode-toggle--inactive"), o.classList.add("darkmode-layer"), d.classList.add("darkmode-background");
                     var i = "true" === window.localStorage.getItem("darkmode"),
                         s = t.autoMatchOsTheme && window.matchMedia("(prefers-color-scheme: dark)").matches,
                         l = null === window.localStorage.getItem("darkmode");
-                    (!0 === i && t.saveInCookies || l && s) && (o.classList.add("darkmode-layer--expanded", "darkmode-layer--simple", "darkmode-layer--no-transition"), a.classList.add("darkmode-toggle--white"), document.body.classList.add("darkmode--activated")), document.body.insertBefore(a, document.body.firstChild), document.body.insertBefore(o, document.body.firstChild), document.body.insertBefore(d, document.body.firstChild), this.addStyle(n), this.button = a, this.layer = o, this.saveInCookies = t.saveInCookies, this.time = t.time
+                    (!0 === i && t.saveInCookies || l && s) && (o.classList.add("darkmode-layer--expanded", "darkmode-layer--simple", "darkmode-layer--no-transition"), a.innerHTML = `<i class="material-icons md-18">${t.off}</i>`, a.classList.add("darkmode-toggle--white"), document.body.classList.add("darkmode--activated")), document.body.insertBefore(a, document.body.firstChild), document.body.insertBefore(o, document.body.firstChild), document.body.insertBefore(d, document.body.firstChild), this.addStyle(n), this.button = a, this.layer = o, this.saveInCookies = t.saveInCookies, this.time = t.time
                 }
             }
             var t, n, a;
@@ -126,12 +129,14 @@
                             n = this.layer,
                             o = 1e3 * parseFloat(this.time);
                         t.classList.add("darkmode-toggle"), t.classList.remove("darkmode-toggle--inactive"), n.classList.add("darkmode-layer--button"), t.addEventListener("click", (function() {
+                            $
                             var r = e.isActivated();
+                            console.log(e)
                             r ? (n.classList.remove("darkmode-layer--simple"), t.setAttribute("disabled", !0), setTimeout((function() {
                                 n.classList.remove("darkmode-layer--no-transition"), n.classList.remove("darkmode-layer--expanded"), t.removeAttribute("disabled")
                             }), 1)) : (n.classList.add("darkmode-layer--expanded"), t.setAttribute("disabled", !0), setTimeout((function() {
                                 n.classList.add("darkmode-layer--no-transition"), n.classList.add("darkmode-layer--simple"), t.removeAttribute("disabled")
-                            }), o)), t.classList.toggle("darkmode-toggle--white"), document.body.classList.toggle("darkmode--activated"), window.localStorage.setItem("darkmode", !r)
+                            }), o)), t.classList.toggle("darkmode-toggle--white"), document.body.classList.toggle("darkmode--activated"), window.localStorage.setItem("darkmode", !r), t.children[0].innerHTML = r ? e.config.on : e.config.off
                         }))
                     }
                 }

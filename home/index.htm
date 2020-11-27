@@ -5,8 +5,8 @@
 <title>Metrix</title>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <meta property="og:image" content="https://www.metrix.pw/img/metrix1x.png">
-<meta property="og:description" content="">
-<meta property="og:title" content="metrix.pw">
+<meta property="og:description" content="Homepage of Metrix, best place to access cool things I've made!">
+<meta property="og:title" content="Homepage">
 <meta property="og:site_name" content="">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#6094C6">
@@ -16,12 +16,15 @@
 <link rel="icon" type="image/png" href="../img/metrix1x.png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="/home/main.css">
-<script src="../scripts/darkmode.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="/scripts/darkmode.js"></script>
 <script src="/home/auth.js"></script>
 </head>
 <body id="body">
 	<div class="GSimage">
-		<img id="idGSimg" class="GSimg" src="../img/metrixrounded.png" alt="metrixrounded"/>
+		<a href="/home/">
+			<img id="idGSimg" class="GSimg" src="../img/metrixrounded.png" alt="metrixrounded"/>
+		</a>
 	</div>
 <nav class="header-all">
 	<div class="GSheader-Top"> </div>
@@ -31,20 +34,20 @@
 		<div id="idGSlogin" class="GSlogin GSnav"></div>
 		<script>
 			let options = {
-  				bottom: 'unset',
- 				right: 'unset', 
- 				left: 'unset', 
- 				time: '0.5s', 
-				mixColor: '#fff', 
-				buttonColorDark: '#100f2c',  
-				buttonColorLight: '#fff', 
+  			bottom: '32px',
+ 				right: '32px',
+ 				left: 'unset',
+ 				time: '0.5s',
+				mixColor: '#fff',
+				buttonColorDark: '#252525',
+				buttonColorLight: '#fff',
 				saveInCookies: true,
-				label: '',
+				off: 'wb_sunny',
+				on: 'bedtime',
 				autoMatchOsTheme: true,
 				}
-  			new Darkmode().showWidget(options);
+  			new Darkmode(options).showWidget();
 		</script>
-			
 	</div>
 <div>
 </nav>

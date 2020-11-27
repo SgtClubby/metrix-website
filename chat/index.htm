@@ -19,11 +19,14 @@
 <link rel="icon" type="image/png" href="../img/metrix1x.png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="main.css">
-<script src="../scripts/darkmode.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="/scripts/darkmode.js"></script>
 </head>
 <body id="body">
 	<div class="GSimage">
-		<img id="idGSimg" class="GSimg" src="../img/metrixrounded.png" alt="metrixrounded"/>
+		<a href="/home/">
+			<img id="idGSimg" class="GSimg" src="../img/metrixrounded.png" alt="metrixrounded"/>
+		</a>
 	</div>
 <nav class="header-all">
 	<div class="GSheader-Top"> </div>
@@ -33,18 +36,19 @@
 		<div id="idGSlogin" class="GSlogin GSnav"></div>
 		<script>
 			let options = {
-  				bottom: 'unset',
- 				right: 'unset', 
- 				left: 'unset', 
- 				time: '0.5s', 
-				mixColor: '#fff', 
-				buttonColorDark: '#100f2c',  
-				buttonColorLight: '#fff', 
+  			bottom: '32px',
+ 				right: '32px',
+ 				left: 'unset',
+ 				time: '0.5s',
+				mixColor: '#fff',
+				buttonColorDark: '#252525',
+				buttonColorLight: '#fff',
 				saveInCookies: true,
-				label: '',
+				off: 'wb_sunny',
+				on: 'bedtime',
 				autoMatchOsTheme: true,
 				}
-  			new Darkmode().showWidget(options);
+  			new Darkmode(options).showWidget();
 		</script>
 			
 	</div>
