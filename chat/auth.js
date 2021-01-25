@@ -1,6 +1,5 @@
 $(function() {
     $(body).hide()
-    let un;
     const url = "https://api.metrix.pw/api/user/me"
     const token = localStorage.getItem('token');
     if (!token){
@@ -27,7 +26,7 @@ $(function() {
             }
     })
     
-    logout = () => {
+    const logout = () => {
         localStorage.removeItem("token");
         window.location.replace("../login")
     }

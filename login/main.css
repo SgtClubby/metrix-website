@@ -76,7 +76,7 @@ font-size: 14px;
 font-weight: bold;
 }
 
-input[type=text],input[type=password],input[type=username]{
+input[type=text],input[type=password],input[type=username],input[type=email]{
 height: 30px;
 padding: 4px;
 width: 19em;

@@ -37,7 +37,13 @@ $(function() {
         return $("#particles-js").remove()
     } 
 
-    validateToken = async () => {
+    const validateToken = document.getElementById('submit')
+    const registerButton = document.getElementById('register')
+    const registerCancel = document.getElementById('canc')
+    const registerConfrim = document.getElementById('conf')
+    
+
+    validateToken.addEventListener("click", async function() {
         $(error).empty()
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
@@ -64,33 +70,34 @@ $(function() {
                 $("#error").show()
                 try {
                     let errors = json.errors
-                    if ($("#error").is(':empty')) {
-                        $("#error").append("Invalid email/password")
-                        window.setTimeout(function(){$("#error").empty()},3000)
+                    if (!errors) {
+                        if ($("#error").is(':empty')) {
+                            $("#error").append("Invalid email/password")
+                            window.setTimeout(function(){$("#error").empty()},3000)
+                        }
                     }
                 } catch (error) {
                     throw error
                 }
             }
         })
-    }
+    })
     
-    registerButton =  () => {
+    registerButton.addEventListener("click", async function() {
         $("#submit, #register, #form_id").hide()
         $("#form_id").fadeIn(400)
         $("#username, #conf, #canc").show()
-        $("#username, #password, #error").empty()
-    }
+        $("#username, #password, #email, #error").empty()
+    })
 
-    signupCancel =  () => {
+    registerCancel.addEventListener("click", async function() {
         $("#conf, #canc, #username, #form_id").hide()
         $("#form_id").fadeIn(400)
         $("#submit, #register").show()
         $("#error").empty()
-    }
+    })
 
-    signupConfrim = async () => {
-        console.log("Started Signup!")
+    registerConfrim.addEventListener("click", async function() {
         $("#error").empty()
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
@@ -115,7 +122,7 @@ $(function() {
                 $("#error").show()
                 if ($("#error").is(':empty')) {
                     $("#error").append("Succesfully created account! <br> Please log in!")
-                    window.setTimeout(function(){location.reload()},2000)
+                    window.setTimeout(function(){location.reload()},1500)
                 }
             } else {
                 $("#error").show()
@@ -128,7 +135,7 @@ $(function() {
                             window.setTimeout(function(){$("#error").empty()},3000)
                         }
                     }
-                    if ($(error).is(':empty')) {
+                    if ($("#error").is(':empty')) {
                         errors.forEach(fault => {
                             $(error).append(fault.msg + "<br>")
                             window.setTimeout(function(){$(error).empty()},3000)
@@ -139,6 +146,5 @@ $(function() {
                 }
             }
         })
-    }  
-
+    })  
 });
